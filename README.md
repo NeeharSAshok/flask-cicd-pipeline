@@ -248,12 +248,4 @@ curl http://YOUR_EC2_IP/api/info
 
 ---
 
-## 📝 Resume Bullet Point
 
-> *Built a CI/CD pipeline using GitHub Actions and Docker to automate testing and deployment of a Flask application on AWS EC2, reducing deployment time from manual 15-minute process to a fully automated push-to-deploy workflow.*
-
----
-
-## 📄 License
-
-MIT — use freely for your portfolio.
