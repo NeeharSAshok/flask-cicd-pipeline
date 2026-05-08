@@ -1,0 +1,20 @@
+version: "3.9"
+
+# Development override — use with:
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  app:
+    build:
+      target: builder          # Use builder stage (has dev deps)
+    volumes:
+      - ./app:/app             # Live-reload code changes
+    environment:
+      - FLASK_ENV=development
+      - APP_VERSION=dev
+    command: ["python", "app.py"]  # Use Flask dev server
+    ports:
+      - "5000:5000"
+
+  nginx:
+    profiles: ["with-nginx"]   # Opt-in: docker compose --profile with-nginx up
